@@ -19,7 +19,7 @@ async def health():
 async def predict(sl:float,sw:float,pl:float,pw:float):
     feature=np.array([[sl,sw,pl,pw]])
     pred=int(model.predict(feature)[0])
-    return {"predictions":pred,"class_name":class_names[pred]}
+    return {"prediction":pred,"class_name":class_names[pred]}
 
 
 
